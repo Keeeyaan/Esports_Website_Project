@@ -1,0 +1,57 @@
+@import "variables";
+@import "mixins";
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $gray;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+  font-family: "Raleway", sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+}
+p {
+  color: $white;
+}
+.btn {
+  padding: 7px 25px;
+  border-radius: 50px;
+  background-color: rgba($darkBlue, 1);
+  color: $white;
+  transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}

@@ -1,0 +1,131 @@
+.header {
+  width: 100%;
+  height: 100px;
+  display: block;
+  background-color: $darkGray;
+
+  &.open {
+    .header-menu {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+      > span:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    visibility: hidden;
+    background-image: linear-gradient($darkBlue, transparent);
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    top: 100px;
+    &.fade-in {
+      display: block;
+    }
+    &.fade-out {
+      display: block;
+    }
+  }
+
+  .inner-header {
+    width: 90%;
+    height: 100%;
+    display: inherit;
+    margin: 0 auto;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      .logo {
+        img {
+          width: 60px;
+        }
+      }
+
+      .header-links {
+        .navigation {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding-left: 0;
+          padding-right: 0;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          a {
+            color: $white;
+            padding: 0 40px;
+            transition: color 300ms ease-in-out;
+          }
+          li::before {
+            content: "";
+            display: block;
+            position: relative;
+            height: 5px;
+            left: 0;
+            right: 0;
+            bottom: -58.5px;
+            opacity: 1;
+            transition: all 300ms ease-in-out;
+          }
+          li:hover::before {
+            background-color: $darkBlue;
+          }
+          a:hover {
+            color: $darkBlue;
+          }
+        }
+      }
+
+      .header-menu {
+        span {
+          display: block;
+          width: 26px;
+          height: 2px;
+          background-color: $white;
+          transform-origin: 1.5px 1px;
+          transition: all 300ms ease-in-out;
+          &:not(:last-child) {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .header-hamenu {
+    visibility: hidden;
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    .nav {
+      background-color: rgba($darkGray, 0.9);
+      padding-left: 0;
+      align-items: center;
+      border-radius: 8px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      a {
+        color: $white;
+        text-align: center; 
+        line-height: 50px;
+      }
+    }
+    &.fade-in {
+      display: block;
+    }
+    &.fade-out {
+      display: block;
+    }
+  }
+}
