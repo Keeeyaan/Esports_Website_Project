@@ -1,0 +1,40 @@
+.hero-section {
+  .hero-slider {
+    overflow: hidden;
+
+    figure {
+      position: relative;
+      margin: 0;
+      width: 500%;
+      animation: 20s slider infinite;
+      img {
+        width: 20%;
+        float: left;
+      }
+    }
+
+    @keyframes slider {
+      0% {
+        left: 0;
+      }
+      10% {
+        left: 0;
+      }
+      25% {
+        left: -100%;
+      }
+      45% {
+        left: -100%;
+      }
+      60% {
+        left: -200%;
+      }
+      85% {
+        left: -200%;
+      }
+      100% {
+        left: -300%;
+      }
+    }
+  }
+}

@@ -80,6 +80,7 @@ p {
 }
 
 .header .overlay {
+  z-index: 1;
   position: absolute;
   visibility: hidden;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#13a0b4), to(transparent));
@@ -180,6 +181,7 @@ p {
 }
 
 .header .header-hamenu {
+  z-index: 2;
   visibility: hidden;
   position: relative;
   width: 90%;
@@ -277,5 +279,70 @@ p {
 .fade-out {
   -webkit-animation: fade-out 300ms ease-in-out forwards;
           animation: fade-out 300ms ease-in-out forwards;
+}
+
+.hero-section .hero-slider {
+  overflow: hidden;
+}
+
+.hero-section .hero-slider figure {
+  position: relative;
+  margin: 0;
+  width: 500%;
+  -webkit-animation: 20s slider infinite;
+          animation: 20s slider infinite;
+}
+
+.hero-section .hero-slider figure img {
+  width: 20%;
+  float: left;
+}
+
+@-webkit-keyframes slider {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  60% {
+    left: -200%;
+  }
+  85% {
+    left: -200%;
+  }
+  100% {
+    left: -300%;
+  }
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  60% {
+    left: -200%;
+  }
+  85% {
+    left: -200%;
+  }
+  100% {
+    left: -300%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
